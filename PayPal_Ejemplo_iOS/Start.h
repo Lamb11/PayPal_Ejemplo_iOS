@@ -11,6 +11,8 @@
 
 @interface Start : UIViewController<PayPalPaymentDelegate>
 
+- (IBAction)btnPagar:(UIButton *)sender;
 
 @end
+
 

@@ -107,6 +107,9 @@
 				5077B3311C40D508007205A5 /* AVFoundation.framework */,
 				5077B32F1C40D4D9007205A5 /* AudioToolbox.framework */,
 				5077B32D1C40D4CC007205A5 /* Accelerate.framework */,
+				5077B3231C40D3E2007205A5 /* PayPalMobile */,
+				5077B3141C40D35A007205A5 /* CardIO */,
+				5077B3111C40C70E007205A5 /* Controllers */,
 				5077B2F61C40C6D3007205A5 /* PayPal_Ejemplo_iOS */,
 				5077B2F51C40C6D3007205A5 /* Products */,
 			);
@@ -123,10 +126,7 @@
 		5077B2F61C40C6D3007205A5 /* PayPal_Ejemplo_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5077B3231C40D3E2007205A5 /* PayPalMobile */,
-				5077B3141C40D35A007205A5 /* CardIO */,
 				5077B3121C40C731007205A5 /* Main */,
-				5077B3111C40C70E007205A5 /* Controllers */,
 				5077B3001C40C6D3007205A5 /* Main.storyboard */,
 				5077B3061C40C6D3007205A5 /* Assets.xcassets */,
 				5077B3081C40C6D3007205A5 /* LaunchScreen.storyboard */,
@@ -152,7 +152,6 @@
 				5077B2FE1C40C6D3007205A5 /* Start.m */,
 			);
 			name = Controllers;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		5077B3121C40C731007205A5 /* Main */ = {
@@ -180,7 +179,8 @@
 				5077B31E1C40D35A007205A5 /* libopencv_core.a */,
 				5077B31F1C40D35A007205A5 /* libopencv_imgproc.a */,
 			);
-			path = CardIO;
+			name = CardIO;
+			path = PayPal_Ejemplo_iOS/CardIO;
 			sourceTree = "<group>";
 		};
 		5077B3231C40D3E2007205A5 /* PayPalMobile */ = {
@@ -195,7 +195,8 @@
 				5077B32A1C40D3E2007205A5 /* PayPalPaymentViewController.h */,
 				5077B32B1C40D3E2007205A5 /* PayPalProfileSharingViewController.h */,
 			);
-			path = PayPalMobile;
+			name = PayPalMobile;
+			path = PayPal_Ejemplo_iOS/PayPalMobile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +391,10 @@
 					"$(PROJECT_DIR)/PayPal_Ejemplo_iOS/CardIO",
 					"$(PROJECT_DIR)/PayPal_Ejemplo_iOS/PayPalMobile",
 				);
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cordero.PayPal-Ejemplo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -406,7 +411,7 @@
 					"$(PROJECT_DIR)/PayPal_Ejemplo_iOS/CardIO",
 					"$(PROJECT_DIR)/PayPal_Ejemplo_iOS/PayPalMobile",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
+				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
 				);
@@ -434,6 +439,7 @@
 				5077B3101C40C6D3007205A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

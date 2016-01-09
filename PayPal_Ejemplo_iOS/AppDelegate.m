@@ -17,11 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    // ...
+    
+    
     [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction : @"YOUR_CLIENT_ID_FOR_PRODUCTION",
-                                                           PayPalEnvironmentSandbox : @"AfcCEAdyEisKqDrJVrWxnphTI41BhyW5XEmKF1pMXafoawXUaekCRpNKHKnrfSCAY4SJkoYUrMiDrN"}];
+                                                           PayPalEnvironmentSandbox : @"AWlMubPGcMS8V9y1D_Xy83LrsO4UAG6LtTwnjKeDDyG-MUZyfzTeWvAFVZgURA_uafrRjg7MFS_ql1lf"}];
     // ...
+    // Override point for customization after application launch.
     return YES;
 }
 
@@ -56,7 +57,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.cordero.PayPal_Ejemplo_iOS" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "margom.PayPalEli" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
@@ -65,7 +66,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"PayPal_Ejemplo_iOS" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"PayPalEli" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -79,7 +80,7 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PayPal_Ejemplo_iOS.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PayPalEli.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
